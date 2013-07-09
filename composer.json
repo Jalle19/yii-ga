@@ -4,6 +4,7 @@
 	"description": "Google Analytics extension for the Yii framework",
 	"keywords": ["yii", "ga", "googleanalytics", "analytics"],
 	"homepage": "https://github.com/Jalle19/yii-ga",
+	"license": "BSD-2-Clause",
 	"require": {
 		"php": ">=5.3.0",
 		"yiisoft/yii": "dev-master"
