@@ -5,6 +5,7 @@
 	"keywords": ["yii", "ga", "googleanalytics", "analytics"],
 	"homepage": "https://github.com/Jalle19/yii-ga",
 	"require": {
+		"php": ">=5.3.0",
 		"yiisoft/yii": "dev-master"
 	},
 	"autoload": {
