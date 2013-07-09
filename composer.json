@@ -1,0 +1,15 @@
+{
+	"name": "jalle19/yii-ga",
+	"type": "library",
+	"description": "Google Analytics extension for the Yii framework",
+	"keywords": ["yii", "ga", "googleanalytics", "analytics"],
+	"homepage": "https://github.com/Jalle19/yii-ga",
+	"require": {
+		"yiisoft/yii": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"yiiga": "src/"
+		}
+	}
+}
