@@ -2,10 +2,10 @@
 
 /**
  * GoogleAnalytics file.
- * @author Sam Stenvall <sam.stenvall@arcada.fi>
+ * @author Sam Stenvall <sam@supportersplace.com>
  * @author Christoffer Niska <ChristofferNiska@gmail.com>
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @package googleanalytics.components
+ * @package yiiga.components
  */
 
 namespace yiiga\components;
@@ -16,12 +16,14 @@ use \Yii as Yii;
  */
 class GoogleAnalytics extends \CApplicationComponent
 {
+
 	/**
-	 * @var string google analytics account ID (tracking code).
+	 * @var string google analytics account ID (tracking code)
 	 */
 	public $accountId;
+
 	/**
-	 * @var string currency for the e-commerce tracking.
+	 * @var string currency for the e-commerce tracking
 	 */
 	public $currency;
 	
@@ -31,14 +33,14 @@ class GoogleAnalytics extends \CApplicationComponent
 	public $cookieDomain;
 	
 	/**
-	 * @var GATransaction[] list of registered transactions.
+	 * @var \yiiga\models\Transaction[] list of registered transactions
 	 */
 	private $_transactions = array();
 
 	/**
-	 * Registers the google-analytics tracking code.
-	 * Call this method on every page that needs tracking.
-	 * All registered transactions will also be registered.
+	 * Registers the google-analytics tracking code. Call this method on every 
+	 * page that needs tracking. All registered transactions will also be 
+	 * registered.
 	 */
 	public function registerTracking()
 	{
@@ -75,7 +77,7 @@ EOD;
 	protected function getTransactionsJS()
 	{
 		ob_start();
-		foreach($this->_transactions as $transaction)
+		foreach ($this->_transactions as $transaction)
 		{
 			echo "_gaq.push({$transaction->toJS()});".PHP_EOL;
 			echo $transaction->getItemsJS();
@@ -86,10 +88,11 @@ EOD;
 
 	/**
 	 * Registers a transaction.
-	 * @param GATransaction $transaction
+	 * @param \yiiga\models\Transaction $transaction
 	 */
 	public function addTransaction($transaction)
 	{
 		$this->_transactions[] = $transaction;
 	}
+
 }
