@@ -54,15 +54,6 @@ class Transaction extends \CComponent
 	protected $_items = array();
 	
 	/**
-	 * Creates a new transaction item object.
-	 * @return GATransactionItem the item.
-	 */
-	public function createItem() 
-	{
-		return new TransactionItem();
-	}
-	
-	/**
 	 * Adds an item to the transaction.
 	 * @param GATransactionItem $item the item.
 	 */

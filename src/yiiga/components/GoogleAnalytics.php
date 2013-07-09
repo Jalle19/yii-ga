@@ -36,15 +36,6 @@ class GoogleAnalytics extends \CApplicationComponent
 	private $_transactions = array();
 
 	/**
-	 * Creates a new transaction object.
-	 * @return GATransaction
-	 */
-	public function createTransaction()
-	{
-		return new Transaction();
-	}
-
-	/**
 	 * Registers the google-analytics tracking code.
 	 * Call this method on every page that needs tracking.
 	 * All registered transactions will also be registered.
