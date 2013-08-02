@@ -53,7 +53,7 @@ $transaction->tax = $order->tax;
 foreach ($order->items as $orderItem)
 {
 	$item = new yiiga\models\TransactionItem();
-	$item->sku = $orderProduct->sku;
+	$item->sku = $orderItem->sku;
 	$item->name = $orderItem->name;
 	$item->price = ($orderItem->price + $orderItem->tax);
 	$item->quantity = $orderItem->quantity;
